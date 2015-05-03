@@ -1,0 +1,178 @@
+.frame
+{
+    margin: 20px;
+    border: 1px solid #6e6e6e;
+    border-radius: 10px;
+    background: #9EC7F9;
+    width: 370px;
+    height: 410px;
+}
+
+.content
+{
+    margin: 5px 5px 5px 10px;
+    border: 1px solid #6e6e6e;
+    width: 350px;
+    height: 360px;
+    background: -webkit-linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+    background: -moz-linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+    background: -o-linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+    background: linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+}
+
+.head
+{
+    background: #E2EBF6;
+    height: 25px;
+
+}
+
+.calc
+{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#buttons1
+{
+    float: right;
+    margin: 0;
+    width: 20px;
+    border: 1px solid #6e6e6e;
+    border-bottom-left-radius: 5px;
+}
+
+#buttons2
+{
+    float: right;
+    margin: 0;
+    width: 20px;
+    border: 1px solid #6e6e6e;
+}
+
+#buttons3
+{
+    float: right;
+    margin-left: 0;
+    margin-right: 10px;
+    width: 20px;
+    border: 1px solid #6e6e6e;
+    border-bottom-right-radius: 5px;
+}
+
+.menu {
+    margin-left: 15px;
+    height: 25px;
+    background: -webkit-linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+    background: -moz-linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+    background: -o-linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+    background: linear-gradient(#FEFEFF 0, #E5EAF5 34%, #D4DBED 35%, #E1E6F6 100%);
+}
+
+.underline
+{
+    text-decoration: underline;
+}
+
+.input
+{
+    width: 330px;
+    height: 55px;
+}
+input[type=text]
+{
+    margin-left: 10px;
+    width: 320px;
+    height: 50px;
+    text-align: right;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    padding-right: 5px;
+}
+.binary-box
+{
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 325px;
+    border: 1px solid #6e6e6e;
+    border-radius: 3px;
+    text-align: right;
+}
+
+.binary
+{
+    margin-left: 2px;
+    width: 35px;
+    padding-right: 7px;
+    padding-left: 7px;
+    text-align: left;
+    font-size: 12px;
+}
+.binary-grey
+{
+    color: #6e6e6e;
+}
+
+.binary-right
+{
+    text-align: right;
+}
+
+.radio
+{
+    float: left;
+    margin: 5px 5px 5px 10px;
+    width: 76px;
+    height: 84px;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+}
+
+.radio2
+{
+    float: left;
+    margin: 0px 5px 5px 10px;
+    width: 76px;
+    height: 84px;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+}
+.controls
+{
+    margin-top: 5px;
+}
+
+input[type=button]
+{
+    margin-bottom: 5px;
+    margin-left: 2px;
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+    padding: 1px;
+}
+
+.off
+{
+    background: none;
+    border: 1px solid #6e6e6e;
+    border-radius: 2px;
+}
+
+.p2
+{
+ margin-top: -4px;
+}
+
+#bigv
+{
+    float: right;
+    height: 55px;
+    margin-right: 13px;
+}
+
+#bigh
+{
+    width: 55px;
+}

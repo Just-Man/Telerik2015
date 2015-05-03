@@ -1,0 +1,51 @@
+table
+{
+    margin: 20px;
+    border: 1px solid #000000;
+    border-spacing: 0;
+}
+td{border-right: 1px solid #ADADAD}
+
+.name
+{
+    width: 120px;
+    border-right: 1px solid #ADADAD;
+    border-bottom: 1px solid #327100;
+}
+
+.city
+{
+    width: 100px;
+    border-right: 1px solid #ADADAD;
+    border-bottom: 1px solid #327100;
+}
+
+.country
+{
+    width: 120px;
+    border-right: 1px solid #ADADAD;
+    border-bottom: 1px solid #327100;
+}
+
+.check
+{
+    width: 100px;
+    border-right: 1px solid #ADADAD;
+    border-bottom: 1px solid #327100;
+}
+
+tr:nth-child(2n)
+{
+    background: #fff;
+}
+
+tr:nth-child(2n+1)
+{
+    background: #E1E6F6;
+}
+
+tr:nth-child(1)
+ {
+     background: #00ff00;
+ }
+

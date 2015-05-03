@@ -1,0 +1,42 @@
+body
+{
+background: #acd125;
+}
+header
+{
+    text-align: center;
+    color: #fff;
+}
+ul
+{
+    list-style-type: none;
+}
+li:last-child
+{
+    text-decoration: underline;
+}
+a
+{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+a.current
+{
+    background: #2bedf3;
+}
+footer a
+{
+    text-align: left;
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+}
+footer>p
+{
+    text-align: left;
+}
+footer
+{
+    text-align: center;
+}

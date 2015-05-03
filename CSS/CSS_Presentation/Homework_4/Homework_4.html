@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="homework_4.css">
+    <title>Homework 4</title>
+</head>
+<body>
+<section>
+    <div class="frame">
+        <div class="head">
+            <img class="calc" src="image/Calculator_Windows_7_Icon.png"/><span>Calculator</span>
+            <input type="button" value="X" id="buttons3">
+            <input type="button" value="^" id="buttons2">
+            <input type="button" value="_" id="buttons1">
+        </div>
+        <div class="content">
+            <div class="menu">
+                        <span class="underline">V</span>iew
+                        <span class="underline">E</span>dit
+                        <span class="underline">H</span>elp
+            </div>
+            <div class="input">
+                            <label for="in" ></label><input type="text" value="8854455" id="in" >
+            </div>
+            <div class="binary-box">
+                    <table>
+                        <tr>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                        </tr>
+                        <tr>
+                            <td class="binary binary-grey">63</td>
+                            <td class="binary"></td>
+                            <td class="binary"></td>
+                            <td class="binary"></td>
+                            <td class="binary binary-grey ">47</td>
+                            <td class="binary"></td>
+                            <td class="binary"></td>
+                            <td class="binary binary-right binary-grey">32</td>
+                        </tr>
+                        <tr>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                            <td class="binary">0000</td>
+                        </tr>
+                        <tr>
+                            <td class="binary binary-grey">31</td>
+                            <td class="binary"></td>
+                            <td class="binary"></td>
+                            <td class="binary"></td>
+                            <td class="binary binary-grey">15</td>
+                            <td class="binary"></td>
+                            <td class="binary"></td>
+                            <td class="binary binary-right binary-grey">0</td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="radio">
+                <input type="radio" id="hex" value="Hex" name="radio1"><label for="hex" >Hex</label><br>
+                <input type="radio" id="Dec" value="Dec" name="radio1"><label for="Dec" >Dec</label><br>
+                <input type="radio" id="Oct" value="Octx" name="radio1"><label for="Oct" >Oct</label><br>
+                <input type="radio" id="Bin" value="Bin" name="radio1"><label for="Bin" >Bin</label>
+            </div>
+            <div class="controls">
+                <input type="button" value=" " disabled="disabled" class="off">
+                <input type="button" value="Mod" class="on">
+                <input type="button" value="A" disabled="disabled" class="off">
+                <input type="button" value="MC" disabled="disabled" class="off">
+                <input type="button" value="MR" disabled="disabled" class="off">
+                <input type="button" value="MS" disabled="disabled" class="off">
+                <input type="button" value="M+" disabled="disabled" class="off">
+                <input type="button" value="M-" disabled="disabled" class="off">
+                <br>
+                <input type="button" value="(" class="on">
+                <input type="button" value=")" class="on">
+                <input type="button" value="B" disabled="disabled" class="off">
+                <input type="button" value="&larr;" class="on">
+                <input type="button" value="CE" class="on">
+                <input type="button" value="C" class="on">
+                <input type="button" value="&plusmn;" class="on">
+                <input type="button" value="&radic;" disabled="disabled" class="off">
+                <br>
+                <input type="button" value="RoL" class="on">
+                <input type="button" value="RoR" class="on">
+                <input type="button" value="C" disabled="disabled" class="off">
+                <input type="button" value="7" class="on">
+                <input type="button" value="8" class="on">
+                <input type="button" value="9" class="on">
+                <input type="button" value="/" class="on">
+                <input type="button" value="%" disabled="disabled" class="off">
+            </div>
+            <div class="p2">
+                <div class="radio2">
+                    <input type="radio" id="Qword" value="Qword" name="radio2"><label for="Qword" >Qword</label><br>
+                    <input type="radio" id="Dword" value="Dword" name="radio2"><label for="Dword" >Dword</label><br>
+                    <input type="radio" id="Word" value="Word" name="radio2"><label for="Word" >Word</label><br>
+                    <input type="radio" id="Byte" value="Byte" name="radio2"><label for="Byte" >Byte</label>
+                </div>
+                <div class="controls">
+                    <input type="button" value="Or" class="on">
+                    <input type="button" value="Xor" class="on">
+                    <input type="button" value="D" disabled="disabled" class="off">
+                    <input type="button" value="4" class="on">
+                    <input type="button" value="5" class="on">
+                    <input type="button" value="6" class="on">
+                    <input type="button" value="*" class="on">
+                    <input type="button" value="1/x" disabled="disabled" class="off">
+                    <br>
+                    <input type="button" value="Lsh" class="on">
+                    <input type="button" value="Rsh" class="on">
+                    <input type="button" value="E" disabled="disabled" class="off">
+                    <input type="button" value="1" class="on">
+                    <input type="button" value="2" class="on">
+                    <input type="button" value="3" class="on">
+                    <input type="button" value="-" class="on">
+                    <input type="button" value="=" id="bigv" class="on">
+                    <br>
+                    <input type="button" value="Not" class="on">
+                    <input type="button" value="And" class="on">
+                    <input type="button" value="F" disabled="disabled" class="off">
+                    <input type="button" value="0" id="bigh" class="on">
+                    <input type="button" value="." disabled="disabled" class="off">
+                    <input type="button" value="+" class="on">
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+</html>

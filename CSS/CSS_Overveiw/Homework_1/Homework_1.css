@@ -1,0 +1,61 @@
+table
+{
+    margin: 20px;
+    width: 400px;
+    background: #6e6e6e;
+}
+
+th
+{
+    height: 30px;
+    text-align: left;
+    color: #959595;
+}
+
+tr.top
+{
+    height: 30px;
+}
+
+.label
+{
+    width: 130px;
+    color: #E1E6F6;
+    vertical-align: text-top;
+}
+
+.value1
+{
+    color: #fff;
+
+}
+
+.red
+{
+    color: #f00;
+}
+
+.value2
+{
+    color: #fff;
+}
+
+.value3
+{
+    color: #959595;
+}
+
+.value4
+{
+    color: #959595;
+}
+
+.value5
+{
+    color: #ffaaaa;
+}
+
+.value6
+{
+    color: #fff;
+}

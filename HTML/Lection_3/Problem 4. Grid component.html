@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Problem 4. Grid component</title>
+        <style>
+            thead{
+                background: linear-gradient(#bebebe 0%,#fff 30%, #979797 100%);
+            }
+            td{
+                border: 1px solid black;
+                padding: 5px;
+            }
+            #ID{
+                width: 100px;
+            }
+            #Pid {
+                width: 35px;
+            }
+            #Name{
+                width: 300px;
+            }
+            #Price{
+                width: 200px;
+            }
+            #Uprice{
+                width: 100px;
+            }
+            #Qty{
+                width: 200px;
+            }
+            #Qunit{
+                width: 130px;
+            }
+            #Stock{
+                width: 180px;
+            }
+            #Ustock{
+                width: 90px;
+            }
+            #Discs{
+                position: absolute;
+                margin-top: 7px;
+            }
+
+            input{
+                margin: 5px;
+                border: 1px solid black;
+                height: 22px;
+                border-radius: 5px;
+            }
+            button{
+                margin: 5px;
+                width: 25px;
+                height: 25px;
+                border: 1px outset black;
+                border-radius: 5px;
+                background: linear-gradient(#bebebe, #979797);
+                padding: 2px;
+                cursor: pointer;
+
+            }
+            .checkbox{
+                margin-left: 25px;
+            }
+            tfoot{
+                background: linear-gradient(#bebebe 0%,#fff 30%, #979797 100%);
+            }
+            a{
+                padding: 5px;
+            }
+            a:hover{
+                padding: 5px;
+                border: 1px solid #f00;
+                border-radius: 2px;
+            }
+            #total{
+                float: right;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <td colspan="6">Drag a column header and drop it here to group by that column</td>
+                </tr>
+                <tr>
+                    <td id="ID"><label for="Pid">ProductID</label></td>
+                    <td id="Name"><label for="Pname">Product Name</label></td>
+                    <td id="Price"><label for="Uprice">Unit Price</label></td>
+                    <td id="Qty"><label for="Qunit">Quantity per unit</label></td>
+                    <td id="Stock"><label for="Ustock">Unit in stock</label></td>
+                    <td id="Disc"><label for="Discs">Discontinued</label> </td>
+                </tr>
+                <tr>
+                    <td><input id="Pid" type="text"></td>
+                    <td><input id="Pname" type="text"></td>
+                    <td><input id="Uprice" type="text"><button class="filter"><img src="stock_standard_filter.png"></button></td>
+                    <td><input id="Qunit" type="text"></td>
+                    <td><input id="Ustock" type="text"><button class="filter" ><img src="stock_standard_filter.png"></button></td>
+                    <td><input id="Discs" type="checkbox" name="check" onClick="toggle()"><button class="filter, checkbox"><img src="stock_standard_filter.png"></button></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Chai</td>
+                    <td>$18.00</td>
+                    <td>10 boxes x 20 bags</td>
+                    <td>39</td>
+                    <td><input type="checkbox" name="check"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="6">
+                    <button id="start">|&#9664;</button>
+                    <button id="prev">&#9664;</button>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <span>...</span>
+                    <button id="next">&#9654;</button>
+                    <button id="end">&#9654;|</button>
+                    <label for="pagesize">Page size:</label>
+                    <select id="pagesize">
+                        <option selected="selected" value="1">10</option>
+                        <option value="2">25</option>
+                        <option value="3">50</option>
+                        <option value="4">100</option>
+                    </select>
+                    <span id="total">335104 item in 33511 pages</span>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

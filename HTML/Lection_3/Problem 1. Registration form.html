@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style>
+        td{
+            border: 1px solid black;
+            padding: 3px;
+        }
+        input[type=text], input[type=email]{
+            width: 98%;
+        }
+        textarea{
+            width: 98%;
+            height: 50px;
+        }
+    </style>
+    <title>Problem 1. Registration form</title>
+</head>
+<body>
+       <form>
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <h1>Registration</h1>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="width: 180px"><form name="First nane" method="get">
+                <label for="furst" >Furst name</label></form></td>
+                    <td style="width: 280px">
+                            <input required name="furs" type="text" id="furst">
+                    </td>
+                    </tr>
+                <tr>
+                    <td><label for="sn" >Second name</label></td>
+                    <td><input required name="second" type="text" id="sn"></td>
+                </tr>
+                <tr>
+                    <td><label for="Adress" >Adress</label></td>
+                    <td><textarea name="adress" id="Adress" rows="1" cols="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input required name="city" type="text" id="city" style="width: 120px">
+                        &nbsp;<label for="State" id="State1" >State</label>
+                        <input name="state" type="text" id="State" style="width: 80px"></td>
+                </tr>
+                <tr>
+                    <td><label for="code">Zip/Postal Code</label></td>
+                    <td><input name="code" type="text" id="code"></td>
+                </tr>
+                <tr>
+                    <td><label for="Count">Country</label></td>
+                    <td><select required name="Country" id="Count">
+                        <option value="" >select</option>
+                        <option value="2">Bulgaria</option>
+                        <option value="3">Greece</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone (country code,<br />area code, number)</label></td>
+                    <td>(+<input required name="phone" type="tel" id="phone" style="width: 55px">)
+                        <input required name="acode" type="tel" id="acode" style="width: 53px">&nbsp;
+                        <input required name="ccode" type="tel" id="ccode" style="width: 95px"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail" >E-mail</label></td>
+                    <td><input required name="mail" type="email" id="mail"></td>
+                </tr>
+                <tr>
+                    <td><label for="year" >Birth date</label></td>
+                    <td><input required name="year" type="text" id="year" placeholder="дд.мм.гггг г."></td>
+                </tr>
+                <tr>
+                    <td><label for="Gender">Gender</label></td>
+                    <td><select required name="Gender" id="Gender" class="form">
+                        <option value="" selected="selected">Select</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Start date</td>
+                    <td>
+                        <input name="start" type="radio" id="spr">
+                        <label for="spr">Spring 2015</label>
+                        <input name="start" type="radio" id="sum">
+                        <label for="sum">Summer 2015</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="qest" >Comments/Question</label></td>
+                    <td><textarea name="quest" id="qest" rows="4" cols="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; background: aquamarine">
+                        <input type="submit" value="send">&nbsp;<input type="reset" name="reset" value="Clean This Form"></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+</body>
+</html>

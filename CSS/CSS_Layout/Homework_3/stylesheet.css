@@ -1,0 +1,77 @@
+.form_conteiner
+{
+    margin: 50px;
+    width: 650px;
+    background: #313131;
+    border-radius: 10px;
+}
+
+.form_header
+{
+    position: relative;
+    background: linear-gradient(#313131 50%, #545454 80%, #000 100%);
+    border: 1px solid #313131;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+label
+{
+    position: relative;
+    bottom: 15px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#name
+{
+    position: relative;
+    bottom: 15px;
+    margin-left: 10px;
+    width: 140px;
+}
+
+#mail
+{
+    position: relative;
+    bottom: 15px;
+    margin-left: 10px;
+    width: 140px;
+}
+
+.go
+{
+    position: relative;
+    bottom: 15px;
+    margin-left: 10px;
+    width: 50px;
+    border: 1px outset #fff;
+    border-radius: 10px;
+    background: radial-gradient(#f00 30%, #a30000 70%);    
+    background: -moz-radial-gradient(#f00 30%, #a30000 70%);
+    background: -webkit-radial-gradient(#f00 30%, #a30000 70%);
+    background: -o-radial-gradient(#f00 30%, #a30000 70%);
+    color: #fff;
+}
+
+.form_content
+{
+    background: #313131;
+    color: #ccc;
+    padding: 20px;
+    border: 1px solid #313131;
+    border-radius: 0 0 10px 10px;
+}
+
+h1
+{
+    margin-left: 0;
+    color: #fff998;
+}
+
+strong
+{
+    color: #a49e61;
+}

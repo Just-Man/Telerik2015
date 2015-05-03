@@ -1,0 +1,30 @@
+ul.list
+{
+    margin: 20px;
+    width: 100px;
+    background: #8fa38e;
+    border: 1px solid #000000;
+    list-style-type: none;
+}
+
+Ul li
+{
+    list-style-type: none;
+}
+
+ul li:hover
+{
+    color: #f00;
+}
+
+Ul li > ul
+{
+    display: none;
+}
+
+Ul li:hover > ul
+{
+    display: block;
+    position: relative;
+    left: -10px;
+}
