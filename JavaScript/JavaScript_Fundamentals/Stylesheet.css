@@ -14,7 +14,8 @@ header{
 
 #logo
 {
-    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 section
@@ -23,7 +24,7 @@ section
     background: #8fa38e;
     width: 80%;
     height: 100%;
-    margin-top: 7%;
+    margin-top: 50px;
     margin-left: 8%;
     border: 1px solid #000000;
     border-radius: 10px 10px 10px 10px;

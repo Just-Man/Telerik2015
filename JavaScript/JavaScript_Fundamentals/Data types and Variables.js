@@ -22,3 +22,7 @@ function Literal () {
         ", а 1 е пропърти с името \"part\""
 
 }
+
+function test () {
+    document.getElementById('result').innerHTML = ""
+}
