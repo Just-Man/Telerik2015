@@ -74,6 +74,10 @@ function bitcheck() {
     }
 }
 
+/*Problem 6. Point in Circle
+Write an expression that checks if given point P(x, y) is within a circle K({0,0}, 5).
+{0,0} is the centre and 5 is the radius*/
+
 function dot() {
     var
         radius = prompt('Въведете радиус на окръжността', '0'),
@@ -101,6 +105,9 @@ function dot() {
     }
 }
 
+/*Problem 7. Is prime
+Write an expression that checks if given positive integer number n (n ≤ 20000) is prime.*/
+
 function number() {
     var numbers = prompt('Въведете крайно число', '0'),
         prime = [],
@@ -121,6 +128,9 @@ function number() {
     }
 }
 
+/*Problem 8. Trapezoid area
+Write an expression that calculates trapezoid's area by given sides a and b and height h.*/
+
 function trapez() {
     var a = parseFloat(prompt('Въведете дължина за страната a', '0')),
         b = parseFloat(prompt('Въведете дължина за страната b', '0')),
@@ -128,6 +138,10 @@ function trapez() {
         S = ((a + b) * h) / 2;
     alert('Лицето на трапеца е ' + S);
 }
+
+/*Problem 9. Point in Circle and outside Rectangle
+Write an expression that checks for given point P(x, y)
+if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).*/
 
 function dot2() {
     var
