@@ -75,7 +75,7 @@ function bitcheck() {
         numbers = +number,
         bits = numbers.toString(2),
         bit3 = bits[bits.length - 3];
-    if (bit3 <= 1) {
+    if (bit3) {
         alert('Третият бит е: ' + bit3 + ' Числото в битове е: ' + bits);
     } else {
         alert('Третият бит е: ' + bit3 + ' Числото в битове е: ' + bits);
