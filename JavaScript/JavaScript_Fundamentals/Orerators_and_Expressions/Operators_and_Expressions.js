@@ -7,12 +7,12 @@ Write an expression that checks if given integer is odd or even.*/
 
 function odd() {
     var number = parseInt(prompt('Въведете число', '0'), 10);
-    if (number % 2 === 0) {
+    if (number % 2) {
         if (number === 0){
             alert('Въведеното число: ' + number + ' е нечетно');
         } else {
-        alert('Въведеното число: ' + number + '  е четно');}
-    } else {alert('Въведеното число: ' + number + ' е нечетно');
+        document.getElementById('result').innerHTML = 'Въведеното число: ' + number + '  нечетно'}
+    } else {document.getElementById('result').innerHTML = 'Въведеното число: ' + number + ' е четно'
     }
 }
 
@@ -22,9 +22,17 @@ it can be divided (without remainder) by 7 and 5 in the same time.*/
 
 function devided() {
     var number = prompt('Въведете число', '0');
+        number = +number;
+    /*Новобранец
     if ((number % 7 === 0) && (number % 5 === 0)) {
         alert('Въведеното число: ' + number + '  е кратно на 5 и на 7');
     } else {alert('Въведеното число: ' + number + ' не е кратно на 5 и на 7');
+    }*/
+    /*Както трябва*/
+    if (number%35) {
+        document.getElementById('result').innerHTML = 'Въведеното число: ' + number + ' не е кратно на 5 и на 7'
+    } else {
+        document.getElementById('result').innerHTML = 'Въведеното число: ' + number + ' е кратно на 5 и на 7'
     }
 }
 
@@ -48,7 +56,7 @@ function check() {
         prompt('Моля въведете стойност с поне 3 символа');
     } else {
         number3 = number1;
-        if (number3[number3.length - 3] === '7') {
+        if (number3[number3.length - 3] === 7) {
             alert('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' е 7');
         } else {
             alert('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' не е 7');
@@ -64,7 +72,7 @@ The result of the expression should be either 1 or 0.
 
 function bitcheck() {
     var number = prompt('Моля въведете стойност', '0'),
-        numbers = parseFloat(number),
+        numbers = +number,
         bits = numbers.toString(2),
         bit3 = bits[bits.length - 3];
     if (bit3 <= 1) {
@@ -82,11 +90,11 @@ function dot() {
     var
         radius = prompt('Въведете радиус на окръжността', '0'),
         start = 5,
-        circlex = (parseFloat(radius) + start),
+        circlex = ((+radius) + start),
         dotx = prompt('Въведете координати на точката по Х', '0'),
         doty = prompt('Въведете координати на точката по У', '0'),
-        rdotx = ((parseFloat(radius) + start) + parseFloat(dotx)),
-        rdoty = ((parseFloat(radius) + start) + parseFloat(doty)),
+        rdotx = (((+radius) + start) + (+dotx)),
+        rdoty = (((+radius) + start) + (+doty)),
         can = document.getElementById("myCanvas"),
         ctx = can.getContext("2d");
     ctx.arc(circlex, circlex, radius, 0, 2 * Math.PI);
@@ -96,8 +104,8 @@ function dot() {
     ctx.fillStyle = "red";
     ctx.fillRect(rdotx, rdoty, 2, 2);
 
-    if (parseFloat(Math.pow((parseFloat(dotx) + start), 2)) +
-        parseFloat(Math.pow((parseFloat(doty) + start), 2)) <=
+    if ((Math.pow(((+dotx) + start), 2)) +
+        (Math.pow(((+doty) + start), 2)) <=
         Math.pow(circlex, 2)) {
         alert('Точката е в окръжноста');
     } else {
@@ -114,7 +122,7 @@ function number() {
         i;
     if (numbers <= 20000) {
         for (i = 2; i <= numbers; i++) {
-            if (numbers % i === 0) {
+            if (!(numbers % i)) {
                 prime.push(' ' + i);
             }
             if (prime.length > 1) {
@@ -132,9 +140,9 @@ function number() {
 Write an expression that calculates trapezoid's area by given sides a and b and height h.*/
 
 function trapez() {
-    var a = parseFloat(prompt('Въведете дължина за страната a', '0')),
-        b = parseFloat(prompt('Въведете дължина за страната b', '0')),
-        h = parseFloat(prompt('Въведете дължина за страната h', '0')),
+    var a = (+prompt('Въведете дължина за страната a', '0')),
+        b = (+prompt('Въведете дължина за страната b', '0')),
+        h = (+prompt('Въведете дължина за страната h', '0')),
         S = ((a + b) * h) / 2;
     alert('Лицето на трапеца е ' + S);
 }
@@ -144,22 +152,21 @@ Write an expression that checks for given point P(x, y)
 if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).*/
 
 function dot2() {
-    var
-        test = 1,
+    var test = 1,
         radius = prompt('Въведете радиус на окръжността', '0'),
         rectx = prompt('Въведете дължина на правоъгълника', '0'),
         recty = prompt('Въведете широчина', '0'),
         dotx = prompt('Въведете координати на точката по Х', '0'),
         doty = prompt('Въведете координати на точката по У', '0'),
         start = 5,
-        circlex = (parseFloat(radius) + start),
+        circlex = ((+radius) + start),
         circley = circlex,
         startx = circlex - (rectx / 2),
         endx = circlex + (rectx / 2),
         starty = circlex - (recty / 2),
         endy = circlex + (recty / 2),
-        rdotx = ((parseFloat(radius) + start) + parseFloat(dotx)),
-        rdoty = ((parseFloat(radius) + start) + parseFloat(doty)),
+        rdotx = (((+radius) + start) + (+dotx)),
+        rdoty = (((+radius) + start) + (+doty)),
         can = document.getElementById("myCanvas"),
         ctx = can.getContext("2d");
     ctx.arc(circlex, circley, radius, 0, 2 * Math.PI);
@@ -170,21 +177,15 @@ function dot2() {
     ctx.fillRect((circlex - (rectx / 2)), (circley - (recty / 2)), rectx, recty);
     ctx.fillStyle = "red";
     ctx.fillRect(rdotx, rdoty, 2, 2);
-
-    if (parseFloat(Math.pow((parseFloat(dotx) + start), 2)) +
-        parseFloat(Math.pow((parseFloat(doty) + start), 2)) <=
+    if ((Math.pow(((dotx*1) + start), 2)) +
+        (Math.pow(((doty*1) + start), 2)) <=
         Math.pow(circlex, 2)) {
-        if (rdotx <= startx || rdotx >= endx) {
-            test = 'x';
-            console.log(test);
-            if (rdoty <= starty || rdoty >= endy) { test += 'y';
+        if (rdotx <= startx || rdoty >= endy || rdoty <= starty || rdotx >= endx) {
                 console.log(test);
-                alert("Точката е в окръжноста и извън правоъгълника");
-            }
-        } else {
-            alert("Точката е в окръжноста, но в правоъгълника");
-        }
+                document.getElementById('result').innerHTML = "Точката е в окръжноста и извън правоъгълника"
+            } else {
+            document.getElementById('result').innerHTML = "Точката е в окръжноста, но в правоъгълника"}
     } else {
-        alert('Точката е извън окръжноста');
+        document.getElementById('result').innerHTML = "Точката е извън окръжноста"
     }
 }
