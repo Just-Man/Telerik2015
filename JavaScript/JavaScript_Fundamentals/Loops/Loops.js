@@ -40,7 +40,7 @@ function minmax() {
         if (max < n[i]) { max = n[i]; }
     }
     document.getElementById('result').innerHTML =
-        'Минималната стойност е: ' + min + ' Максималната стойност е: ' + max;
+        'Минималната стойност е: <strong>' + min + '</strong><br> Максималната стойност е: ' + max + '</strong>';
 }
 
 /*Problem 4. Lexicographically smallest
@@ -66,11 +66,11 @@ function prop() {
         win.sort();
     }
     document.getElementById('result').innerHTML =
-        '<br><strong>За обекта document</strong><br><br> Най-малкия елемент е: ' + doc[0] +
-        '<br> Най-големия е: ' + doc[doc.length - 1] +
-        '<br><br> <strong>За обекта navigator</strong><br><br> Най-малкия елемент е: ' + nav[0] +
-        "<br> Най-големия е: " + nav[nav.length - 1] +
-        '<br><br> <strong>За обекта window</strong><br><br> Най-малкия елемент е: ' + win[0] +
-        "<br> Най-големия е: " + win[win.length - 1];
+        '<br><strong>За обекта document</strong><br><br> Първото Property е: ' + doc[0] +
+        '<br> Последното Property е: ' + doc[doc.length - 1] +
+        '<br><br> <strong>За обекта navigator</strong><br><br> Първото Property е: ' + nav[0] +
+        '<br> Последното Property е: ' + nav[nav.length - 1] +
+        '<br><br> <strong>За обекта window</strong><br><br> Първото Property е: ' + win[0] +
+        '<br> Последното Property е: ' + win[win.length - 1];
 
 }
