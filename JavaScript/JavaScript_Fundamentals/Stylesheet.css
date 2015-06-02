@@ -44,15 +44,15 @@ section
 
 .button, .button a, ol a
 {
-    display: inline-block;
     background: linear-gradient(#A1C381 , #82b517 55% , #327100);
     padding: 7px;
-    margin: 10px 0;
+    margin: 10px auto;
     text-decoration: none;
     color: #000000;
     border: 1px solid #000;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 2px 2px 2px #004202;
+    font-weight: bold;
 }
 .button:hover, ol a:hover {
     background: linear-gradient(#327100, #82b517 55%, #A1C381);
