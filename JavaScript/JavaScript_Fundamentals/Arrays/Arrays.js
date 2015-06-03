@@ -55,8 +55,9 @@ function repeatNumber() {
         i;
     for (i = 0; i < end; i += 1) {
         numbers[i] = prompt('Въведете елемент номер: ' + (+i + 1), '0');
+        numbers[i] = +numbers[i];
         if (numbers[i - 1] === numbers[i]) {
-            filtered.push(+numbers[i]);
+            filtered.push(numbers[i]);
         } else {
             filtered = [];
         }
@@ -65,14 +66,15 @@ function repeatNumber() {
         }
     }
     if (final.length === filtered.length) {
-        filtered.push(+filtered[0]);
-        final.push(+final[0]);
+        filtered.push(filtered[0]);
+        final.push(final[0]);
         document.getElementById('result').innerHTML = 'Ново получените масиви от повтарящи се елементи са два:' +
             '<br>1.) [' + filtered + '] с общ брой на елементите в него: ' + filtered.length +
             '<br>2.) [' + final + '] с общ брой на елементите в него: ' + final.length;
     } else {
-        final.push(parseInt(final[0], 10));
-        alert('Ново полученият масив от повтарящи се елементи е: [' + final + '] с общ брой на елементите в него: ' + final.length);
+        final.push(+final[0]);
+        document.getElementById('result').innerHTML = 'Ново полученият масив от повтарящи се елементи е: [' + final
+            + '] с общ брой на елементите в него: ' + final.length;
     }
 }
 
@@ -115,10 +117,11 @@ function increasingNumber() {
     }
 }
 
-//таск 5 - Sorting an array means to arrange its elements in increasing order. Write a script to sort an array. Use
-//the "selection sort" algorithm: Find the smallest element, move it at the first position, find the
-//smallest from the rest, move it at the second position, etc.
-//Hint: Use a second array
+/*Problem 5. Selection sort
+ Sorting an array means to arrange its elements in increasing order.
+ Write a script to sort an array.
+ Use the selection sort algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.
+ Hint: Use a second array*/
 
 function sortArr() {
     var end = prompt('Въведете броя елементи'),
@@ -136,20 +139,23 @@ function sortArr() {
             }
         }
     }
-    console.log(numbers);
+    document.getElementById('result').innerHTML = ' ' + numbers;
 }
 
-//Task 6 - Write a program that finds the most frequent number in an array.
-// Example: {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times)
+/*Problem 6. Most frequent number
+Write a script that finds the most frequent number in an array.
+    Example:
+            input                           result
+4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3       4 (5 times)     */
 
 function repeatNumbers() {
-    var end = prompt('Въведете броя желани елементи'),
+    var mem,
+        j,
+        i,
+        end = prompt('Въведете броя желани елементи'),
         numbers = [],
         filtered = [],
-        final = [],
-        mem,
-        j,
-        i;
+        final = [];
     for (i = 0; i < end; i += 1) {
         numbers[i] = prompt('Въведете елемент номер: ' + (+i + 1), '0');
         for (j = 0; j < i; j += 1) {
@@ -183,3 +189,39 @@ function repeatNumbers() {
             ' с брой повторения: ' + final.length;
     }
 }
+
+/*Problem 7. Binary search
+ Write a script that finds the index of given element in a sorted array of integers by using the binary search algorithm.*/
+
+function binary() {
+    var elements,
+        i,
+        j,
+        len,
+        mem,
+        middle,
+        end = prompt('Въведете броя желани елементи'),
+        number = prompt('Въведете число за проверка'),
+        numbers = [];
+    for (i = 0; i < end; i += 1) {
+        numbers[i] = prompt('Въведете елемент номер: ' + (+i + 1), '0');
+        for (j = 0; j < i; j += 1) {
+            if (numbers[i] < numbers[j]) {
+                mem = numbers[j];
+                numbers[j] = numbers[i];
+                numbers[i] = mem;
+            }
+        }
+    }
+    elements = numbers;
+    for (len = elements.length; len > 1; len -= 1) {
+        middle = elements.length / 2;
+        if (number < elements[middle]) {
+            elements = elements.slice(elements[0], elements[middle]);
+        } else {
+            elements = elements.slice(elements[middle], elements[end]);
+        }
+        console.log(elements);
+    }
+}
+binary();
