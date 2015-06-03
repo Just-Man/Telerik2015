@@ -133,8 +133,8 @@ function sortArr() {
         numbers[i] = parseInt(prompt('Въведете елемент номер: ' + (+i + 1)), 10);
         for (j = 0; j < i; j += 1) {
             if (numbers[i] < numbers[j]) {
-                mem = numbers[j];
-                numbers[j] = numbers[i];
+                mem = +numbers[j];
+                numbers[j] = +numbers[i];
                 numbers[i] = mem;
             }
         }
@@ -160,8 +160,8 @@ function repeatNumbers() {
         numbers[i] = prompt('Въведете елемент номер: ' + (+i + 1), '0');
         for (j = 0; j < i; j += 1) {
             if (numbers[i] < numbers[j]) {
-                mem = numbers[j];
-                numbers[j] = numbers[i];
+                mem = +numbers[j];
+                numbers[j] = +numbers[i];
                 numbers[i] = mem;
             }
         }
@@ -196,32 +196,36 @@ function repeatNumbers() {
 function binary() {
     var elements,
         i,
-        j,
         len,
         mem,
         middle,
         end = prompt('Въведете броя желани елементи'),
         number = prompt('Въведете число за проверка'),
-        numbers = [];
+        numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     for (i = 0; i < end; i += 1) {
         numbers[i] = prompt('Въведете елемент номер: ' + (+i + 1), '0');
-        for (j = 0; j < i; j += 1) {
-            if (numbers[i] < numbers[j]) {
-                mem = numbers[j];
-                numbers[j] = numbers[i];
-                numbers[i] = mem;
-            }
-        }
     }
+    numbers.sort(function (a, b) {return a - b; });
+    mem = numbers.indexOf(+number);
     elements = numbers;
     for (len = elements.length; len > 1; len -= 1) {
-        middle = elements.length / 2;
-        if (number < elements[middle]) {
-            elements = elements.slice(elements[0], elements[middle]);
+        middle = Math.round(elements.length / 2);
+        len = elements.length;
+        if (number >= elements[middle]) {
+            elements = elements.splice(middle, middle);
+            console.log(elements);
         } else {
-            elements = elements.slice(elements[middle], elements[end]);
+            elements = elements.splice(0, middle);
+            console.log(elements);
         }
-        console.log(elements);
     }
+    if (mem === -1) {
+        document.getElementById('result').innerHTML = 'Числото: ' + number + ' не е намерено във въвединият масив';
+        console.log('');
+    } else {document.getElementById('result').innerHTML = 'Числото: ' + number + ' се намира на позиция <strong>' + (mem + 1)
+        + '</strong><br> от въдеденият масив '
+        + numbers.join(', ');
+        console.log('');
+        }
 }
 binary();
