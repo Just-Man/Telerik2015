@@ -193,6 +193,12 @@ function repeatNumbers() {
 /*Problem 7. Binary search
  Write a script that finds the index of given element in a sorted array of integers by using the binary search algorithm.*/
 
+/*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*//*ВАЖНО*/
+
+/*Задачата е нарочно изпълнена по този начин и целта е използването на различните функции при масивите и знам че не е най-бързото от към
+ performance. В задачата са използвани: .sort, .indexOf, .slice( може да се промени на splice и пак ще изкарва верен резултат, но при splice
+ трябва да се добави още една променлива която да пази първоначалният масив, тъй като splice го променя за разлика от slice)*/
+
 function binary() {
     var elements,
         i,
@@ -200,32 +206,29 @@ function binary() {
         mem,
         middle,
         end = prompt('Въведете броя желани елементи'),
-        number = prompt('Въведете число за проверка'),
-        numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        number = parseInt(prompt('Въведете число за проверка'), 10),
+        numbers = [];
     for (i = 0; i < end; i += 1) {
-        numbers[i] = prompt('Въведете елемент номер: ' + (+i + 1), '0');
+        numbers[i] = parseInt(prompt('Въведете елемент номер: ' + (+i + 1), '0'), 10);
     }
     numbers.sort(function (a, b) {return a - b; });
-    mem = numbers.indexOf(+number);
+    mem = numbers.indexOf(number);
     elements = numbers;
-    for (len = elements.length; len > 1; len -= 1) {
-        middle = Math.round(elements.length / 2);
+    for (len = elements.length; len > 0; len -= 1) {
         len = elements.length;
+        middle = Math.round(elements.length / 2);
         if (number >= elements[middle]) {
-            elements = elements.splice(middle, middle);
+            elements = elements.slice(middle, middle);
             console.log(elements);
         } else {
-            elements = elements.splice(0, middle);
+            elements = elements.slice(0, middle);
             console.log(elements);
         }
     }
     if (mem === -1) {
         document.getElementById('result').innerHTML = 'Числото: ' + number + ' не е намерено във въвединият масив';
-        console.log('');
     } else {document.getElementById('result').innerHTML = 'Числото: ' + number + ' се намира на позиция <strong>' + (mem + 1)
         + '</strong><br> от въдеденият масив '
         + numbers.join(', ');
-        console.log('');
         }
 }
-binary();

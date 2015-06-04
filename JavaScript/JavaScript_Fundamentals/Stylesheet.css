@@ -44,6 +44,7 @@ section
 
 .button, .button a, ol a
 {
+    display: inline-block;
     background: linear-gradient(#A1C381 , #82b517 55% , #327100);
     padding: 7px;
     margin: 10px auto;
@@ -70,5 +71,6 @@ section
 
 #result{
     float: left;
-    width: 600px;
+    width: 50%;
+    max-width: 600px;
 }
