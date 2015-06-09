@@ -205,4 +205,5 @@ function names() {
                 }
     }
     document.getElementById('result').innerHTML = name;
+    console.log(name);
 }

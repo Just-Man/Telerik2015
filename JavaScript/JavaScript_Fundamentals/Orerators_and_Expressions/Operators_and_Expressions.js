@@ -49,20 +49,30 @@ function area() {
 /*Problem 4. Third digit
 Write an expression that checks for given integer if its third digit (right-to-left) is 7.*/
 
-function check() {
-    var number1 = prompt('Въведете число', '0'),
+function check(number1) {
+    var //number1,//prompt('Въведете число', '0'),
         number3 = number1.length;
     if (number3 < 3) {
         prompt('Моля въведете стойност с поне 3 символа');
     } else {
         number3 = number1;
         if (number3[number3.length - 3] === 7) {
-            alert('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' е 7');
+            console.log('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' е 7');
+            //alert('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' е 7');
         } else {
-            alert('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' не е 7');
+            console.log('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' не е 7');
+            //alert('Третата цифра (от дясно на ляво) от въведената стойност: ' + number1 + ' не е 7');
         }
     }
 }
+var start = new Date().getTime() / 1000;
+check('1732');
+check('3214');
+var end = new Date().getTime() / 1000,
+    time = end - start;
+console.log(time);
+
+
 
 /*Problem 5. Third bit
 Write a boolean expression for finding if the bit #3 (counting from 0) of a given integer.
@@ -88,14 +98,14 @@ Write an expression that checks if given point P(x, y) is within a circle K({0,0
 
 function dot() {
     var
-        radius = prompt('Въведете радиус на окръжността', '0'),
+        radius = 50,//prompt('Въведете радиус на окръжността', '0'),
         start = 5,
         center = ((+radius) + start),
-        dotX = prompt('Въведете координати на точката по Х', '0'),
-        dotY = prompt('Въведете координати на точката по У', '0'),
+        dotX = 35,//prompt('Въведете координати на точката по Х', '0'),
+        dotY = 45,//prompt('Въведете координати на точката по У', '0'),
         displayDotX = (((+radius) + start) + (+dotX)),
         displayDotY = (((+radius) + start) + (+dotY)),
-        can = document.getElementById("myCanvas"),
+        can = window.dodocument.getElementById("myCanvas"),
         ctx = can.getContext("2d");
     ctx.arc(center, center, radius, 0, 2 * Math.PI);
     ctx.fillStyle = 'black';

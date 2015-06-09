@@ -209,6 +209,7 @@ function binary() {
         number = parseInt(prompt('Въведете число за проверка'), 10),
         numbers = [];
     for (i = 0; i < end; i += 1) {
+        console.log("");
         numbers[i] = parseInt(prompt('Въведете елемент номер: ' + (+i + 1), '0'), 10);
     }
     numbers.sort(function (a, b) {return a - b; });
@@ -226,9 +227,16 @@ function binary() {
         }
     }
     if (mem === -1) {
+        console.log("");
         document.getElementById('result').innerHTML = 'Числото: ' + number + ' не е намерено във въвединият масив';
     } else {document.getElementById('result').innerHTML = 'Числото: ' + number + ' се намира на позиция <strong>' + (mem + 1)
         + '</strong><br> от въдеденият масив '
         + numbers.join(', ');
-        }
+    }
 }
+
+var start = new Date().getTime() / 1000;
+binary();
+var end = new Date().getTime() / 1000,
+    time = end - start;
+console.log(time);
