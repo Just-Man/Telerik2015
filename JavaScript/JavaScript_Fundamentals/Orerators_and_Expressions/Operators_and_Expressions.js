@@ -49,8 +49,8 @@ function area() {
 /*Problem 4. Third digit
 Write an expression that checks for given integer if its third digit (right-to-left) is 7.*/
 
-function check(number1) {
-    var //number1,//prompt('Въведете число', '0'),
+function check() {
+    var number1 = prompt('Въведете число', '0'),
         number3 = number1.length;
     if (number3 < 3) {
         prompt('Моля въведете стойност с поне 3 символа');
@@ -65,12 +65,12 @@ function check(number1) {
         }
     }
 }
-var start = new Date().getTime() / 1000;
+/*var start = new Date().getTime() / 1000;
 check('1732');
 check('3214');
 var end = new Date().getTime() / 1000,
     time = end - start;
-console.log(time);
+console.log(time);*/
 
 
 
@@ -98,11 +98,11 @@ Write an expression that checks if given point P(x, y) is within a circle K({0,0
 
 function dot() {
     var
-        radius = 50,//prompt('Въведете радиус на окръжността', '0'),
+        radius = prompt('Въведете радиус на окръжността', '0'),
         start = 5,
         center = ((+radius) + start),
-        dotX = 35,//prompt('Въведете координати на точката по Х', '0'),
-        dotY = 45,//prompt('Въведете координати на точката по У', '0'),
+        dotX = prompt('Въведете координати на точката по Х', '0'),
+        dotY = prompt('Въведете координати на точката по У', '0'),
         displayDotX = (((+radius) + start) + (+dotX)),
         displayDotY = (((+radius) + start) + (+dotY)),
         can = window.dodocument.getElementById("myCanvas"),

@@ -7,10 +7,10 @@ function test(count) {
         console.log(i);
     }
 }
-var start = new Date().getTime() / 1000;
+start = new Date().getTime() / 1000;
 test(1000000);
-var end = new Date().getTime() / 1000,
-    time = end - start;
+end = new Date().getTime() / 1000;
+time = end - start;
 
 /*function test1(count) {
     var i;

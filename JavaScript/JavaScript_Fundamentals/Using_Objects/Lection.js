@@ -28,6 +28,7 @@ function person(fName, lName, mark, hairColor, hairType) {
     return persons;
 }
 
+/*
 var  test = person('Test', 'Testov', [6, 3.45], 'green', 'line');
 var  test1 = person('ivan', 'Testov', [3, 3.45], 'black', 'dot');
 
@@ -39,12 +40,13 @@ console.log(test1.fullName());
 console.log(test1.finalScore());
 console.log(test1.hair.type);
 console.log(test1.hair.color);
+*/
 
 function countWords(text) {
     var i,
         count = {},
         word,
-        words = text.toLowerCase().split(' ');
+        words = text.toLowerCase().split('');
     for (i in words) {
         word = words[i];
         if (!count[word]) {
@@ -68,7 +70,8 @@ var dumi = countWords(text),
     result = [],
     sorted;
 for (duma in dumi) {
-    //console.log(duma + ' --> ' + dumi[duma]);
+    console.log(duma + ' --> ' + dumi[duma]);
     result = duma + ' --> ' + dumi[duma];
 }
+
 
